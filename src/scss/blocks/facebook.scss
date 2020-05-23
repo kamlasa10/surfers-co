@@ -1,0 +1,134 @@
+.facebook {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  @include tablets {
+    margin: 0 auto;
+  }
+}
+.facebook__wrap {
+  position: relative;
+  z-index: 10;
+  background-color: $white;
+  transform: translateY(-70px);
+  width: 77%;
+  margin: 0 auto;
+  @media (max-width: 825px) {
+    width: 100%;
+  }
+  &-top {
+    margin-bottom: 8px;
+  }
+  &-bottom {
+    background-color: $white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.13);
+    margin: 10px;
+  }
+}
+.facebook__top {
+  height: 170px;
+  background-color: #385490;
+  padding-top: 20px;
+}
+.facebook__title {
+  text-align: center;
+  margin-bottom: 15px;
+  svg {
+    width: 153px;
+    height: 50px;
+    fill: $white;
+  }
+}
+.facebook__content {
+  display: flex;
+  padding: 9px;
+  background: url("../img/facebook-content-bg.jpg") no-repeat center/cover;
+}
+.facebook__content-left,
+.facebook__content-right {
+  width: 50%;
+}
+.facebook__content-left {
+  @media (max-width: 360px) {
+    width: 80%;
+  }
+}
+.facebook__content-right {
+  @media (max-width: 360px) {
+    width: 20%;
+  }
+}
+.facebook__content-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.facebook-top-row {
+  margin-bottom: 39px;
+}
+.facebook__img {
+  margin-right: 7px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.38);
+  border: 2px solid #ffffff;
+  background-color: $blue;
+  font-family: $mont;
+  font-weight: 700;
+  padding: 16px 7px;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+.facebook__link {
+  position: relative;
+  border-radius: 3px;
+  padding: 0 8px;
+  background-color: #f6f7f9;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 28px;
+  font-size: 12px;
+  color: #4b4f56;
+  font-weight: 700;
+  &--fb::before,
+  &--share::before {
+    content: "";
+    background-image: url("../spritePng/sprite.png");
+    position: absolute;
+    top: 5px;
+    left: 12px;
+  }
+  &--fb::before {
+    background-position: -52px -11px;
+    width: 12px;
+    height: 12px;
+  }
+  &--share::before {
+    background-position: 0px -33px;
+    width: 11px;
+    height: 11px;
+  }
+}
+.facebook__bottom {
+  color: $white;
+  background-color: #e5e5e5;
+}
+.facebook__bottom-text {
+  font-size: 12px;
+  color: #4b4f56;
+}
+.facebook__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include tablets {
+    justify-content: center;
+  }
+  @include small-phones {
+    justify-content: flex-start;
+  }
+}
+.facebook__item {
+  margin-right: 3px;
+}

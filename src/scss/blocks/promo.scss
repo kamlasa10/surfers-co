@@ -1,0 +1,23 @@
+.promo {
+  margin-bottom: 150px;
+  font-family: $playFair;
+  margin-top: 146px;
+  text-align: center;
+  @include phones {
+    margin-top: 80px;
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-size: 50px;
+    line-height: 55px;
+    @include phones {
+      font-size: 40px;
+      line-height: 45px;
+    }
+  }
+  &__text {
+    font-size: 24px;
+    color: $white;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.64);
+  }
+}

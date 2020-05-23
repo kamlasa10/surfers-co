@@ -1,0 +1,126 @@
+.footer {
+  margin-top: -233px;
+  padding-top: 45px;
+  padding-bottom: 65px;
+  background-color: $black;
+  &__top {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 170px;
+    margin-bottom: 80px;
+    &-wrap {
+      display: flex;
+      .footer__list:not(:last-child) {
+        margin-right: 65px;
+
+        @include phones{
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    display: block;
+    padding-left: 27px;
+    font-family: $raleway;
+    font-size: 14px;
+    line-height: 34px;
+    color: $white;
+    &--custom::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: flex-start;
+    &-subscribe {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-right: 170px;
+      margin-top: 70px;
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+    }
+    &-item {
+      position: relative;
+      margin-left: 10px;
+      padding-left: 13px;
+      font-family: $raleway;
+      font-weight: 600;
+      font-size: 12px;
+      color: #4d4d4d;
+      &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      &:not(:first-child)::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: #4d4d4d;
+        top: 9px;
+        left: 0;
+        border-radius: 50%;
+      }
+    }
+    &-subscribe {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    &__top {
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 940px) {
+    &__bottom {
+      flex-direction: column;
+      &-list {
+        width: 100%;
+      }
+      &-item {
+        margin-bottom: 5px;
+      }
+      &-subscribe {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-right: 0;
+      }
+    }
+  }
+  @include tablets {
+    &__top {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 205px;
+      margin-bottom: 40px;
+    }
+    &__bottom {
+      align-items: center;
+    }
+    .footer__bottom-list {
+      justify-content: center;
+    }
+    .footer__bottom-subscribe {
+      align-items: center;
+    }
+  }
+  @media (max-width: 393px) {
+    .footer__bottom-item {
+      margin-left: 0;
+    }
+  }
+}
+

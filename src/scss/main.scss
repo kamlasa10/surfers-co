@@ -1,0 +1,15 @@
+// Basic settings
+@import "_setting/mixin";
+@import "_setting/variables";
+@import "_setting/normalize";
+@import "_setting/fonts";
+@import "_setting/basic";
+
+// plugin style
+
+@import "node_modules/slick-carousel/slick/slick.scss";
+
+// Project directory style
+@import "_section/*.scss";
+@import "blocks/*.scss";
+

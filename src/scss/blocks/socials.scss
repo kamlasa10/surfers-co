@@ -1,0 +1,41 @@
+.socials {
+  display: flex;
+  align-items: center;
+}
+.socials__item {
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: $black;
+  border-radius: 50%;
+  transition: $smothy;
+  &:hover {
+    background-color: $white;
+    svg {
+      fill: $black;
+    }
+  }
+  svg {
+    fill: $white;
+  }
+  &--fb svg {
+    width: 8px;
+    height: 16px;
+  }
+  &--inst svg {
+    width: 16px;
+    height: 16px;
+  }
+  &--message svg {
+    width: 28px;
+    height: 16px;
+  }
+}

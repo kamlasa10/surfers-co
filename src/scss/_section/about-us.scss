@@ -1,0 +1,70 @@
+.about-us__bg {
+  position: relative;
+  margin-top: -35px;
+  display: flex;
+  z-index: 5;
+  background: url("../img/about-us-bg.jpg") no-repeat;
+  overflow: hidden;
+  @media (max-width: 870px) {
+    flex-direction: column;
+  }
+  @include phones {
+    margin-top: -20px;
+  }
+}
+.about-us__heading {
+  @media (max-width: 600px) {
+    font-size: 100px;
+    line-height: 110px;
+  }
+  @include phones {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  @media (max-width: 350px) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+.about-us__left {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 300px;
+  text-align: right;
+  padding-top: 95px;
+  padding-right: 127px;
+  background-color: $white;
+  width: 50%;
+  &-content {
+    text-align: left;
+    width: 370px;
+  }
+  @media (max-width: 1050px) {
+    padding-right: 0;
+    padding-left: 30px;
+  }
+  @include tablets {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+.about-us__title {
+  text-align: center;
+}
+.about-us__text {
+  margin-bottom: 25px;
+  font-family: $playFair;
+  color: $black;
+  font-size: 22px;
+  line-height: 38px;
+}
+.about-us__link {
+  font-family: $mont;
+  color: $blue;
+  border-bottom: 1px solid $blue;
+  &:hover {
+    color: darken($blue, 15%);
+  }
+}

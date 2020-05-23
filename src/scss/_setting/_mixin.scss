@@ -1,0 +1,47 @@
+@mixin element-color($color) {
+  background-image: url('data:image/svg+xml;utf8,<svg ...><g stroke="#{$color}" ... /></g></svg>');
+}
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 992px) {
+    @content
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: 770px) {
+    @content
+  }
+}
+
+@mixin larger-phone {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: 480px) {
+    @content
+  }
+}
+
+@mixin small-phones {
+  @media screen and (max-width: 320px) {
+    @content
+  }
+}

@@ -1,0 +1,62 @@
+.burger-menu-btn {
+  position: absolute;
+  display: none;
+  bottom: 17px;
+  right: 0;
+  @include laptop {
+    display: block;
+    position: absolute;
+    right: 4%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: $white;
+    width: 20px;
+    height: 2px;
+    z-index: 7;
+    transition: 0.3s;
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: $white;
+      top: 5px;
+      left: 0;
+      z-index: 5;
+      transition: 0.3s;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: $white;
+      top: -5px;
+      left: 0;
+      z-index: 5;
+      transition: 0.3s;
+    }
+
+    &--active {
+      background: transparent;
+      transition: 0.3s;
+
+      &:after {
+        transform: translateY(5px) rotate(-45deg);
+        transition: 0.3s;
+        top: -5px;
+      }
+
+      &:before {
+        transform: translateY(5px) rotate(45deg);
+        transition: 0.3s;
+      }
+    }
+  }
+  @include phones {
+    top: 50%;
+  }
+}

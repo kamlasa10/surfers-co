@@ -1,0 +1,7 @@
+.main {
+  z-index: 0;
+  background: url('../img/main--bg.jpg') no-repeat;
+  &__content {
+    z-index: 10;
+  }
+}

@@ -1,0 +1,60 @@
+.subscribe {
+  &__item {
+    position: relative;
+  }
+  &__form {
+    max-width: 300px;
+  }
+  &__title {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-family: $mont;
+    color: $white;
+  }
+  &__icon {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 16px;
+    height: 11px;
+    fill: #4d4d4d;
+  }
+  &__input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 35px;
+    font-family: $raleway;
+    font-size: 14px;
+    line-height: 34px;
+    color: #4d4d4d;
+    border-bottom: 1px solid #4d4d4d;
+    outline: none;
+    transition: $smothy;
+    @include placeholder {
+      color: #4d4d4d;
+    }
+    &:focus {
+      .subscribe__icon {
+        fill: $blue;
+      }
+      border-color: $blue;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    border: none;
+    background-color: $blue;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
